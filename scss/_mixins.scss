@@ -1,0 +1,44 @@
+@mixin flex($justify, $align, $direction: row) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin bg($url, $size: cover, $position: center,) {
+    background-image: $url;
+    background-position: $position;
+    background-size: $size;
+    background-repeat: no-repeat;
+}
+
+@mixin btn($bgColor, $txtColor, $bgHover, $txtHover) {
+    padding: 15px 30px;
+    background: $bgColor;
+    border: 2px solid $white;
+    text-transform: uppercase;
+    outline: none;
+    color: $txtColor;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: $transition;
+    letter-spacing: 2px;
+    display: block;
+
+    &:hover {
+        background-color: $bgHover;
+        color: $txtHover;
+    }
+}
+
+@mixin underline($margin, $bgColor, $width) {
+    &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: $width;
+        margin: $margin;
+        background: $bgColor;
+    }
+}

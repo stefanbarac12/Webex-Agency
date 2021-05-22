@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap");
+/* rgb(29, 82, 124) */
+/* rgb(69, 154, 211) */
+/* rgb(253, 127, 69) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #3c3b3c;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 8vh;
+  padding: 10px;
+  color: #fff;
+  background-image: linear-gradient(to right, #fd7f45, #459ad3 95%, #1d527c);
+}
+
+nav h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav ul li {
+  margin: 0 30px;
+}
+
+nav ul a {
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #1d527c;
+}
+
+header {
+  background-image: linear-gradient(rgba(69, 154, 211, 0.7), rgba(253, 127, 69, 0.7)), url(../img/baloon.jpg);
+  height: 92vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+header h1 {
+  font-weight: normal;
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+header h1 span {
+  font-style: italic;
+}
+
+header p {
+  margin: 30px 0;
+  font-size: 1.2rem;
+}
+
+header button {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 2px;
+  display: block;
+}
+
+header button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 100px 0;
+}
+
+.about article {
+  flex: 0 0 48%;
+}
+
+.about article:first-child h2 {
+  font-size: 3rem;
+  color: #1d527c;
+}
+
+.about article:first-child h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  margin: 20px 0;
+  background: #1d527c;
+}
+
+.about article:first-child p {
+  line-height: 1.8;
+}
+
+.about article img {
+  box-shadow: 10px 10px 0px 0px #1d527c;
+}
+
+.services {
+  background-image: linear-gradient(#376e90de, #376e90de), url(../img/header.jpg);
+  background-position: center;
+}
+
+.services article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 100px 0;
+}
+
+.services article div:first-child {
+  flex: 0 0 35%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.services article div:first-child i {
+  font-size: 5rem;
+  color: rgba(253, 127, 69, 0.9);
+  margin: 60px;
+}
+
+.services article div:last-child {
+  flex: 0 0 48%;
+}
+
+.services article div:last-child h2 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.services article div:last-child h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  margin: 20px 0;
+  background: #fd7f45;
+}
+
+.services article div:last-child p {
+  color: #fff;
+  margin: 50px 0;
+}
+
+.blogs {
+  padding: 100px 0;
+}
+
+.blogs h2 {
+  font-size: 3rem;
+  color: #1d527c;
+  text-align: center;
+}
+
+.blogs h2::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100px;
+  margin: 20px 700px;
+  background: #fd7f45;
+}
+
+.blogs article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.blogs article div {
+  flex: 0 0 31%;
+}
+
+.blogs article div h3 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 2rem;
+}
+
+.blogs article div button {
+  padding: 15px 30px;
+  background: #1d527c;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  outline: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 2px;
+  display: block;
+  margin: 30px auto 0;
+}
+
+.blogs article div button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+footer {
+  background-image: linear-gradient(rgba(253, 127, 69, 0.8), rgba(69, 154, 211, 0.8)), url(../img/baloon.jpg);
+  padding: 120px 0;
+  text-align: center;
+}
+
+footer article:first-child i {
+  font-size: 2rem;
+  color: #1d527c;
+  margin: 0 15px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+footer article:first-child i:hover {
+  transform: translateY(-20px);
+}
+
+footer article:first-child p {
+  color: #fff;
+  font-size: 1.2rem;
+  padding-top: 30px;
+}
+
+@media (max-width: 767px) {
+  nav ul li {
+    margin: 20px 10px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    margin: 30px;
+    text-align: center;
+  }
+  .about article {
+    flex: 0 0 100%;
+  }
+  .about article:first-child {
+    margin-bottom: 40px;
+  }
+  .services article div:first-child {
+    flex: 0 0 100%;
+  }
+  .services article div:first-child i {
+    margin: 30px;
+  }
+  .services article div:last-child {
+    flex: 0 0 100%;
+    margin-top: 40px;
+  }
+  .blogs h2 {
+    font-size: 2rem;
+  }
+  .blogs h2::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100px;
+    margin: 20px 120px;
+    background: #fd7f45;
+  }
+  .blogs article div {
+    flex: 0 0 100%;
+  }
+  .blogs article div button {
+    margin: 30px auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

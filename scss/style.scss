@@ -1,0 +1,260 @@
+@import 'starter';
+@import 'mixins';
+
+nav {
+    @include flex(space-around, center);
+    height: 8vh;
+    padding: 10px;
+    color: $white;
+    background-image: linear-gradient(
+        to right,
+        $orange,
+        $svetloPlava 95%,
+        $tamnoPlava
+        );
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    ul {
+        @include flex(space-between, center);
+
+        li {
+            margin: 0 30px;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: $transition;
+
+            &:hover {
+                color: $tamnoPlava;
+            }
+        }
+    }
+}
+
+header {
+    background-image:linear-gradient(
+        rgba(69, 154, 211, 0.7),
+        rgba(253, 127, 69, 0.7)
+        ),
+        url(../img/baloon.jpg);
+        
+    height: 92vh;
+    @include flex(center, center, column);
+    color: $white;
+
+    h1 {
+        font-weight: normal;
+        font-size: 3rem;
+        line-height: 1.3;
+
+        span {
+            font-style: italic;
+        }
+    }
+
+    p {
+        margin: 30px 0;
+        font-size: 1.2rem;
+    }
+
+    button {
+        @include btn(transparent, $white, $white, $black);
+    }
+}
+
+.about {
+    @include flex(space-between, center);
+    padding: $padding;
+
+    article {
+        flex: 0 0 48%;
+
+        &:first-child {
+            h2 {
+                @include underline(20px 0, $tamnoPlava, 100px);
+                font-size: 3rem;
+                color: $tamnoPlava;
+            }
+
+            p {
+                line-height: 1.8;
+            }
+        }
+
+        img {
+            box-shadow: 10px 10px 0px 0px $tamnoPlava;
+        }
+    }
+}
+
+.services {
+    background-image: linear-gradient(
+        #376e90de,
+        #376e90de,
+    ),
+    url(../img/header.jpg);
+    background-position: center;
+    
+    article {
+        @include flex(space-between, center);
+        padding: $padding;
+
+        div:first-child {
+            flex: 0 0 35%;
+            @include flex(space-between, center);
+
+            i {
+                font-size: 5rem;
+                color: rgba(253, 127, 69, 0.9);
+                margin: 60px;
+            }
+        }
+
+        div:last-child {
+            flex: 0 0 48%;
+
+            h2 {
+                @include underline(20px 0, $orange, 100px);
+                font-size: 3rem;
+                color: $white;
+            }
+
+            p {
+                color: $white;
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+.blogs {
+    padding: $padding;
+
+    h2 {
+        @include underline(20px 700px, $orange, 100px);
+        font-size: 3rem;
+        color: $tamnoPlava;
+        text-align: center;
+    }
+
+    article {
+        @include flex(space-between, center);
+        padding-top: 20px;
+
+        div {
+            flex: 0 0 31%;
+
+            h3 {
+                text-align: center;
+                margin: 30px 0;
+                font-size: 2rem;
+            }
+
+            button {
+                @include btn($tamnoPlava, $white, $black, $white);
+                margin: 30px auto 0;
+            }
+        }
+    }
+}
+
+footer {
+    background-image: linear-gradient(
+        rgba(253, 127, 69, 0.8),
+        rgba(69, 154, 211, 0.8),
+    ),
+    url(../img/baloon.jpg);
+    padding: 120px 0;
+    text-align: center;
+
+    article:first-child {
+        i {
+            font-size: 2rem;
+            color: $tamnoPlava;
+            margin: 0 15px;
+            transition: $transition;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-20px);
+            }
+        }
+
+        p {
+            color: $white;
+            font-size: 1.2rem;
+            padding-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        ul {
+            li {
+                margin: 20px 10px;
+            }
+        }
+    }
+
+    header {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            margin: 30px;
+            text-align: center
+        }
+}
+
+    .about {
+        article {
+            flex: 0 0 100%;
+
+            &:first-child {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .services {
+        article {
+            div:first-child {
+                flex: 0 0 100%;
+
+                i {
+                    margin: 30px;
+                }
+            }
+
+            div:last-child {
+                flex: 0 0 100%;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .blogs {
+        h2 {
+            @include underline(20px 120px, $orange, 100px);
+            font-size: 2rem;
+        }
+
+        article {
+            div {
+                flex: 0 0 100%;
+
+                button {
+                    margin: 30px auto;
+                }
+            }
+        }
+    }
+}
